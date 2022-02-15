@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Webpixels">
+    <title>Portfolio - Jade Vinson</title>
+    <!-- Preloader -->
+    <style>
+        @keyframes hidePreloader {
+            0% {
+                width: 100%;
+                height: 100%;
+            }
+
+            100% {
+                width: 0;
+                height: 0;
+            }
+        }
+
+        body>div.preloader {
+            position: fixed;
+            background: white;
+            width: 100%;
+            height: 100%;
+            z-index: 1071;
+            opacity: 0;
+            transition: opacity .5s ease;
+            overflow: hidden;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body:not(.loaded)>div.preloader {
+            opacity: 1;
+        }
+
+        body:not(.loaded) {
+            overflow: hidden;
+        }
+
+        body.loaded>div.preloader {
+            animation: hidePreloader .5s linear .5s forwards;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                document.querySelector('body').classList.add('loaded');
+            }, 300);
+        });
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/brand/favicon.png" type="image/png"><!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- Quick CSS -->
+    <link rel="stylesheet" href="assets/css/quick-website.css" id="stylesheet">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Chargement...</span>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-cookies" data-backdrop="false" aria-labelledby="modal-cookies" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-aside left-4 right-4 bottom-4">
+            <div class="modal-content bg-dark-dark">
+                <div class="modal-body"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">
+                <h4 class="text-center text-md-left mb-3">
+                    Jade Vinson
+                </h4>
+            </a>
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mt-4 mt-lg-0 ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profil.html">Profil</a>
+                    </li>
+                    <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
+                        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Stages</a>
+                        <div class="dropdown-menu dropdown-menu-single">
+                            <a href='stages-effectues.html' class='dropdown-item'>Stages effectués</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
+                        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projets</a>
+                        <div class="dropdown-menu dropdown-menu-single">
+
+                            <a href="ateliers-profs.html" class="dropdown-item">Tous les AP</a>
+                            <a href="ap-1.html" class="dropdown-item">AP N°1</a>
+                            <a href="ap-2.html" class="dropdown-item">AP N°2</a>
+                            <a href="ap-3.html" class="dropdown-item">AP N°3</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="veille-technologique.html">Veille Technologique</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Main content -->
+
+
+    <section class="slice py-6 pt-lg-7 pb-lg-8 bg-gradient-blue">
+        <!-- Container -->
+        <div class="container">
+            <div class="row row-grid align-items-center">
+                <div class="col-lg-6">
+                    <!-- Heading -->
+                    <h1 class="h1 text-white text-center text-lg-left my-4">
+                       <strong>Stages</strong> effectués
+                    </h1>
+                    <!-- Text -->
+                    <p class="lead text-white text-center text-lg-left opacity-8">
+                        Voici un récapitulatif global des stages que j'ai pu effectuer durant cette formation.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- SVG separator -->
+        <div class="shape-container shape-line shape-position-bottom">
+            <svg width="2560px" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 2560 100" style="enable-background:new 0 0 2560 100;" xml:space="preserve" class="">
+                <polygon points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+    </section>
+    <section class="slice slice-lg">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="card col-lg-5 hover-translate-y-n10 hover-shadow-lg">
+                                        <div class="card-body">
+                                            <div class="pb-4">
+                                                <img alt="Image placeholder" src="logo/logomajorel.jpg" class="svg-inject" style="height: 50px; width: 75px;">
+                        </div>
+                        <div class="pt-2 pb-3">
+                            <h5>Majorel <strong><br>mai-juin 2021, 6 semaines</br></strong></h5>
+
+                            <p class="text-muted mb-0">
+                                Stage effectué lors de ma 1ère année de BTS.<br>
+                                <br>
+                                - Modification d'un site existant <br>
+                                - Ajout d'une fonction de blocage des comptes utilisateurs<br>
+                                - Développement d'une page HTML à partir d’une maquette
+
+                            </p>
+                            <br>
+                            <div class="col-sm-12">
+                                <a type="button" class="btn btn-secondary btn-lg btn-block align-bottom" href="stage-premier.html">Détails</a>
+                                <a type="button" class="btn btn-primary btn-lg btn-block align-bottom" target="__blank" href="https://drive.google.com/drive/folders/1fzEFyEHwFas7R7yf5ZMCuonoBlH1HSMG?usp=sharing">Accéder à la documentation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='p-6'></div>
+                <div class="card col-lg-5 hover-translate-y-n10 hover-shadow-lg">
+                    <div class="card-body">
+                        <div class="pb-4">
+                            <img alt="Image placeholder" src="logo/logomajorel.jpg" class="svg-inject" style="height: 50px; width: 75px;">
+                        </div>
+                        <div class="pt-2 pb-3">
+                            <h5>Majorel <strong><br>novembre 2021-janvier 2022, 8 semaines</h6>
+                              </strong></h5>
+
+                            <p class="text-muted mb-0">
+                                Stage effectué lors de ma 2ème année de BTS.<br>
+                                <br>
+                                - Migration du Framework .NET de la version 2 à la version 6,<br>
+                                - Création d'un API, <br>
+                                - Création d'un nouveau projet PORTAIL.<br>
+
+                            </p>
+                            <br>
+                            <div class="col-sm-12">
+                                <a type="button" class="btn btn-secondary btn-lg btn-block" href="stage-deuxieme.html">Détails</a>
+                                <a type="button" class="btn btn-primary btn-lg btn-block" target="__blank" href="https://drive.google.com/drive/folders/1_-OVnt440eyEg4bC6lyQQUUbmscLQsWz?usp=sharing">Accéder à la documentation</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core JS  -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/svg-injector/dist/svg-injector.min.js"></script>
+    <script src="assets/libs/feather-icons/dist/feather.min.js"></script>
+    <!-- Page JS -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1oALsXLX-XEh2iYbE8tOjxsdFNHE39WM"></script>
+    <!-- Quick JS -->
+    <script src="assets/js/quick-website.js"></script>
+    <!-- Feather Icons -->
+    <script>
+        feather.replace({
+            'width': '1em',
+            'height': '1em'
+        })
+    </script>
+</body>
+
+</html>

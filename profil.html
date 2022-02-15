@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="logo/ongletlo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo/ongletlo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo/ongletlo.png">
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Webpixels">
+    <title>Portfolio - Jade Vinson</title>
+    <!-- Preloader -->
+    <style>
+        @keyframes hidePreloader {
+            0% {
+                width: 100%;
+                height: 100%;
+            }
+
+            100% {
+                width: 0;
+                height: 0;
+            }
+        }
+
+        body>div.preloader {
+            position: fixed;
+            background: white;
+            width: 100%;
+            height: 100%;
+            z-index: 1071;
+            opacity: 0;
+            transition: opacity .5s ease;
+            overflow: hidden;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body:not(.loaded)>div.preloader {
+            opacity: 1;
+        }
+
+        body:not(.loaded) {
+            overflow: hidden;
+        }
+
+        body.loaded>div.preloader {
+            animation: hidePreloader .5s linear .5s forwards;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                document.querySelector('body').classList.add('loaded');
+            }, 300);
+        });
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/brand/favicon.png" type="image/png"><!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- Quick CSS -->
+    <link rel="stylesheet" href="assets/css/quick-website.css" id="stylesheet">
+</head>
+
+<body>
+<!-- Preloader -->
+<div class="preloader">
+    <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Chargement...</span>
+    </div>
+</div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">
+            <h4 class="text-center text-md-left mb-3">
+                Jade Vinson
+            </h4>
+        </a>
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mt-4 mt-lg-0 ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profil.html">Profil</a>
+                </li>
+                <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
+                    <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Stages</a>
+                    <div class="dropdown-menu dropdown-menu-single">
+                        <a href='stages-effectues.html' class='dropdown-item'>Stages effectués</a>
+                        <a href='stage-premier.html' class='dropdown-item'>Stage de première année</a>
+                        <a href='stage-deuxieme.html' class='dropdown-item'>Stage de deuxième année</a>
+
+                    </div>
+                </li>
+                <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
+                    <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projets</a>
+                    <div class="dropdown-menu dropdown-menu-single">
+
+                        <a href="ateliers-profs.html" class="dropdown-item">Tous les AP</a>
+                        <a href="ap-1.html" class="dropdown-item">AP N°1</a>
+                        <a href="ap-2.html" class="dropdown-item">AP N°2</a>
+                        <a href="ap-3.html" class="dropdown-item">AP N°3</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="veille-technologique.html">Veille Technologique</a>
+                </li>
+            </ul>
+            <!-- Button -->
+            <!--<a class="navbar-btn btn btn-sm btn-primary d-none d-lg-inline-block ml-3" href="contact.html">
+                Me Contacter
+            </a>-->
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+</style>
+
+<section>
+    <div class="container">
+        <div class="main-body">
+
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb" class="main-breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Profil</li>
+                </ol>
+            </nav>
+            <!-- /Breadcrumb -->
+
+            <div class="row gutters-sm">
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column align-items-center text-center">
+<!--                                <img src="" alt="Admin" class="rounded-circle" width="150">-->
+                                <div class="mt-3">
+                                    <h4>Jade Vinson</h4>
+                                    <p class="text-muted font-size-sm">Etudiante en </p>
+                                    <p class="text-muted font-size-sm"> BTS SIO, Option SLAM</p>
+                                    <p class="text-muted font-size-sm">2020-2022</p>
+
+                                    <p class="text-secondary mb-1">Lycée Turgot, Paris</p>
+                                    <!--<button class="btn btn-primary">Follow</button>
+                                    <button class="btn btn-outline-primary">Message</button>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                <h6 class="mb-0"><svg xmlns="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail mr-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Mail</h6>
+                                <span class="text-muted">jade.vinson23@gmail.com</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe mr-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Portfolio</h6>
+                                <a href="https://jadevinson.fr/" ><span class="text-muted">https://jadevinson.fr/</span></a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                <h6 class="mb-0"><svg href="https://github.com/JadeVinsonPro/" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github mr-2 icon-inline"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Github</h6>
+                                <a href="https://github.com/JadeVinsonPro/" > <span class="text-muted" href="https://github.com/JadeVinsonPro/" >github.com/JadeVinsonPro/</span></a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                <h6 class="mb-0"><svg href="https://www.linkedin.com/in/jade-vinson/" xmlns="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="  mr-2 icon-inline"><path d=""></path></svg>LinkedIn</h6>
+                                <a href="https://www.linkedin.com/in/jade-vinson-405a4b1b5" > <span class="text-muted" href="https://www.linkedin.com/in/jade-vinson-405a4b1b5" >www.linkedin.com/jade-vinson/</span></a>
+                            </li>
+                            <li>
+                                <a  class="btn btn-primary btn-lg btn-block" target="__blank" href="JadeVinsonCV.pdf">Accéder à mon CV</a>
+                            </li>
+
+                        </ul>
+                        <br>
+                        <ul class="list-group list-group-flush">
+
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                <h4>Langues</h4>
+                                <br>
+
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                <h6>Anglais</h6>
+                                <h5>Niveau B2</h5>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                <h6>Espagnol</h6>
+                                <h5>Niveau B1</h5>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                <h4>Langages de programmation</h4>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                <h6>PHP, JavaScript</h6>
+                                <h6>HTML, CSS</h6>
+                            </li>
+                            <li>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="mt-3">
+                                <h4>EXPÉRIENCE PROFESSIONELLE</h4>
+                                <br>
+                                <div>
+                            <div class="row">
+
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0"><strong>Majorel</strong>, stagiaire
+                                        novembre 2021-janvier 2022, 8 semaines</h6>
+                                </div>
+                                <div class="col-sm-9 text-primary">
+                                    - Migration du Framework .NET de la version 2 à la version 6,<br>
+                                    - Création d'un API, <br>
+                                    - Création d'un nouveau projet.<br>
+
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="row">
+
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0"><strong>Majorel</strong>, stagiaire
+                                        mai-juin 2021, 6 semaines</h6>
+                                </div>
+                                <div class="col-sm-9 text-primary">
+                                    - Modification sur un site existant, <br>
+                                    - Ajout d'une fonction de blocage des comptes utilisateurs,<br>
+                                    - Développement d'une page HTML à partir d’une maquette.
+
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0"><strong>Pinoy Services</strong>, hôtesse de caisse
+                                        boutique de produits asiatiques | février 2020, 2 semaines</h6>
+                                </div>
+                                <div class="col-sm-9 text-primary">
+                                    - Référencement du catalogue des produits,<br>
+                                    - Numérisation des clients,<br>
+                                    - Rencontre avec les fournisseurs,<br>
+                                    - Communication avec les clients en anglais.<br>
+
+                                </div>
+                            </div>
+                            <hr>
+
+                        </div>
+                    </div>
+<hr>
+                            <div class="mt-3">
+                                <h4>PARCOURS UNIVERSITAIRE</h4>
+                                <br>
+                                <div>
+                                    <div class="row">
+
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Lycée Turgot,| septembre 2020 - présent</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-primary">
+                                            BTS SIO spécialité SLAM <br>
+                                            - Déléguée de classe<br>
+
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <div class="row">
+
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Lycée Paul Claudel d'Hulst</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-primary">
+                                            Baccalauréat ES (Economique et Social) mention BIEN, <br>
+                                            - Récompensée du premier prix pour le film réalisé à New York.<br>
+
+                                        </div>
+                                        <br>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br>
+                   <!-- <div class="row gutters-sm">
+                        <div class="col-sm-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2"></i>Langues</h6>
+
+                                    <h6>Anglais</h6>
+                                    <small>Niveau B2</small>
+
+                                    <h6>Espagnol</h6>
+                                    <small>Niveau B1</small>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2"></i>Langages de programmation </h6>
+                                    <h6>PHP</h6>
+                                    <h6>Java</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+
+                            <hr>
+                            <div class="mt-3">
+                                <h4>COMPETENCES</h4>
+                                <br>
+                                <div>
+                                    <div class="row">
+
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Tableau de synthèse de compétences</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-primary">
+                                            <a  class="btn btn-primary btn-lg btn-block" target="__blank" href="Tableau.pdf">Accéder à mon tableau de synthèse de compétences</a>
+
+                                        </div>
+                                    </div>
+                                    <hr>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

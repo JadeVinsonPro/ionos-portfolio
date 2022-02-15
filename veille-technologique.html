@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Webpixels">
+    <title>Portfolio - Jade Vinson</title>
+    <!-- Preloader -->
+    <style>
+        @keyframes hidePreloader {
+            0% {
+                width: 100%;
+                height: 100%;
+            }
+
+            100% {
+                width: 0;
+                height: 0;
+            }
+        }
+
+        body>div.preloader {
+            position: fixed;
+            background: white;
+            width: 100%;
+            height: 100%;
+            z-index: 1071;
+            opacity: 0;
+            transition: opacity .5s ease;
+            overflow: hidden;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body:not(.loaded)>div.preloader {
+            opacity: 1;
+        }
+
+        body:not(.loaded) {
+            overflow: hidden;
+        }
+
+        body.loaded>div.preloader {
+            animation: hidePreloader .5s linear .5s forwards;
+        }
+
+        body {
+            margin-top: 20px;
+        }
+        .timeline_area {
+            position: relative;
+            z-index: 1;
+        }
+        .single-timeline-area {
+            position: relative;
+            z-index: 1;
+            padding-left: 180px;
+        }
+        @media only screen and (max-width: 575px) {
+            .single-timeline-area {
+                padding-left: 100px;
+            }
+        }
+        .single-timeline-area .timeline-date {
+            position: absolute;
+            width: 180px;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -ms-grid-row-align: center;
+            align-items: center;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+            padding-right: 60px;
+        }
+        @media only screen and (max-width: 575px) {
+            .single-timeline-area .timeline-date {
+                width: 100px;
+            }
+        }
+        .single-timeline-area .timeline-date::after {
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            content: "";
+            background-color: #ebebeb;
+            top: 0;
+            right: 30px;
+            z-index: 1;
+        }
+        .single-timeline-area .timeline-date::before {
+            position: absolute;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background-color: #f1c40f;
+            content: "";
+            top: 50%;
+            right: 26px;
+            z-index: 5;
+            margin-top: -5.5px;
+        }
+        .single-timeline-area .timeline-date p {
+            margin-bottom: 0;
+            color: #020710;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .single-timeline-area .single-timeline-content {
+            position: relative;
+            z-index: 1;
+            padding: 30px 30px 25px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            margin-top: 15px;
+            -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+            box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+            border: 1px solid #ebebeb;
+        }
+        @media only screen and (max-width: 575px) {
+            .single-timeline-area .single-timeline-content {
+                padding: 20px;
+            }
+        }
+        .single-timeline-area .single-timeline-content .timeline-icon {
+            -webkit-transition-duration: 500ms;
+            transition-duration: 500ms;
+            width: 30px;
+            height: 30px;
+            background-color: #f1c40f;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 30px;
+            flex: 0 0 30px;
+            text-align: center;
+            max-width: 30px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .single-timeline-area .single-timeline-content .timeline-icon i {
+            color: #ffffff;
+            line-height: 30px;
+        }
+        .single-timeline-area .single-timeline-content .timeline-text h6 {
+            -webkit-transition-duration: 500ms;
+            transition-duration: 500ms;
+        }
+        .single-timeline-area .single-timeline-content .timeline-text p {
+            font-size: 13px;
+            margin-bottom: 0;
+        }
+        .single-timeline-area .single-timeline-content:hover .timeline-icon,
+        .single-timeline-area .single-timeline-content:focus .timeline-icon {
+            background-color: #020710;
+        }
+        .single-timeline-area .single-timeline-content:hover .timeline-text h6,
+        .single-timeline-area .single-timeline-content:focus .timeline-text h6 {
+            color: #3f43fd;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                document.querySelector('body').classList.add('loaded');
+            }, 300);
+        });
+
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/brand/favicon.png" type="image/png"><!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- Quick CSS -->
+    <link rel="stylesheet" href="assets/css/quick-website.css" id="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Chargement...</span>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">
+                <h4 class="text-center text-md-left mb-3">
+                    Jade Vinson
+                </h4>
+            </a>
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mt-4 mt-lg-0 ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profil.html">Profil</a>
+                    </li>
+                    <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
+                        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Stages</a>
+                        <div class="dropdown-menu dropdown-menu-single">
+                            <a href='stages-effectues.html' class='dropdown-item'>Stages effectués</a>
+                            <a href='stage-premier.html' class='dropdown-item'>Stage de première année</a>
+                            <a href='stage-deuxieme.html' class='dropdown-item'>Stage de deuxième année</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
+                        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projets</a>
+                        <div class="dropdown-menu dropdown-menu-single">
+
+                            <a href="ateliers-profs.html" class="dropdown-item">Tous les AP</a>
+                            <a href="ap-1.html" class="dropdown-item">AP N°1</a>
+                            <a href="ap-2.html" class="dropdown-item">AP N°2</a>
+                            <a href="ap-3.html" class="dropdown-item">AP N°3</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="veille-technologique.html">Veille Technologique</a>
+                    </li>
+                </ul>
+                <!-- Button -->
+                <!--<a class="navbar-btn btn btn-sm btn-primary d-none d-lg-inline-block ml-3" href="contact.html">
+                    Me Contacter
+                </a>-->
+            </div>
+        </div>
+    </nav>
+    <!-- Main content -->
+    <section class="slice py-6 pt-lg-7 pb-lg-8 bg-gradient-blue">
+        <!-- Container -->
+        <div class="container">
+            <div class="row row-grid align-items-center">
+                <div class="col-lg-6">
+                    <!-- Heading -->
+                    <h1 class="h1 text-white text-center text-lg-left my-4">
+                        <strong>Veille technologique</strong>
+                    </h1>
+                    <!-- Text -->
+                    <p class="lead text-white text-center text-lg-left opacity-8">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- SVG separator -->
+        <div class="shape-container shape-line shape-position-bottom">
+            <svg width="2560px" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 2560 100" style="enable-background:new 0 0 2560 100;" xml:space="preserve" class="">
+                <polygon points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+    </section>
+    <section class="slice slice-lg">
+        <div class="container">
+            <br>
+            <h2>Ma veille porte sur les outils pour les lire les données du Big Data.
+            </h2>
+        </div>
+    </section>
+
+<section class="slice slice-lg">
+    <div class="container">
+    <h2>Qu'est-ce qu'une veille technologie ?</h2>
+        <br>
+    <h4>La veille technologique est l’activité qui consiste à se tenir au courant des nouveautés, à actualiser ses connaissances, à suivre l’évolution permanente et les innovations d'un domaine choisi. Apres avoir collecté et rassemblé les informations, il faut les analyser pour dégager les tendances les plus importantes afin d’orienter sa carrière professionnelle et choisir les formations adaptées à ces nouvelles technologies.
+    </h4>
+    </div>
+</section>
+
+
+    <section class="slice slice-lg">
+        <div class="container">
+            <h2>Qu'est-ce que le Big Data ?</h2>
+            <br>
+            <h4>Le Big Data est un écosystème technologique destiné à l'analyse de très grands volumes de données complexes et hétérogènes (petaoctets), issus d'une grande variété de nouvelles sources, tels que les moteurs de recherche, les réseaux sociaux, les applications mobiles, …
+            </h4>
+            <br>
+            <h4>
+                Pour McKinsey Global Institute, conseiller de confiance de nombreuses entreprises et institutions les plus influentes au monde,  le terme de « Big data » décrit des jeux de données dont la taille ou la nature ne permet pas une capture, un stockage, une gestion et un traitement par des outils classiques et traditionnels. Le volume de données, considéré comme étant « Big Data », peut varier par secteur d’activité (d’une centaine de To à plusieurs Po).
+            </h4>
+        </div>
+    </section>
+
+    <section class="slice slice-lg">
+        <div class="container">
+            <h2>Pourquoi avons-nous besoin d'outils ?</h2>
+            <br>
+            <h4>
+                Le Big Data révolutionne le marché en exploitant, en batch et surtout en temps réel (streaming), une immense quantité de données hétérogènes avec des formats différents et très variés.
+            </h4>
+            <h4>Le Big Data est un flux de données divers, généré par les hommes  tel que :<br>
+                - •	des évènements sur les réseaux sociaux : Facebook, Twitter, ...<br>
+                - •	l’envoi et la réception d’email, SMS, …<br>
+                - •	le push sur applications mobiles,<br>
+                - les Blogs<br>
+                - •	l’état des appareils connectés à internet : L'Internet des objets (IoT),<br>
+                - •	les photos, les vidéos, …<br>
+
+                De ce fait, il faut trouver un moyen de traiter et d’exploiter toutes ces données récoltées pour les utiliser au mieux et de les structurer si besoin. Tous ces formats variés de données (log de site, vidéo, …) nécessitent une multitude d’outils spécifiques et des systèmes de stockage particuliers (HDFS : Hadoop Distributed File System, bases de données NoSQL, ..)
+
+            </h4>
+            <h4>
+                D’un point de vue commerciale, le but est d’obtenir la vision 360° du client (en étudiant son comportement, ses centres d’intérêt, l’interaction qu’il entretient, avec une marque, à travers les réseaux sociaux, …) pour définir des décisions stratégiques et opérationnelles via des applications analytiques, intégrées dans les systèmes d’information.
+                Dans un premier temps, les données clients (structurées et non structurées) sont collectées, nettoyées, structurées et consolidées afin d’enrichir la base de données.
+                Dans un second temps, des algorithmes analytiques sont appliqués sur ces données afin d’obtenir des scores et des segments qui seront implémentés dans la base de données marketing afin de cibler et d’envoyer des communications Marketing personnalisées.
+
+            </h4>
+            <br>
+
+        </div>
+    </section>
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading -->
+        <h2 class="my-4">Quelles solutions sont disponibles ?
+            <small>Comment choisir ?</small>
+        </h2>
+
+        <div class="row">
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                   <!-- <a href="#"><img class="card-img-top" src="https://via.placeholder.com/700x400" alt=""></a>-->
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">Installer une version open source</a>
+                        </h4>
+                        <p class="card-text">
+                        </p>
+
+                        <p class="card-text">Open Source gratuit<br>
+                            - Hadoop (Pig,Hive…)<br>
+                            - Titan / neo4J<br>
+                            - Elastic search<br>
+                            - R/Python<br>
+                        </p>
+                        <hr>
+                        <h4 class="card-title">
+                            <a href="#">Les avantages</a>
+                        </h4>
+                        <p class="card-text">
+                            - Coûts maîtrisables <br>
+                            - Productivité<br>
+                            - Cout maitrisé
+                        </p>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">Choisir un distributeur
+                            </a>
+                        </h4>
+                        <p class="card-text">Des open source professionnels<br>
+                            - MapR<br> – Hortonworks-Cloudera<br>
+                            – Talend <br>
+                            – Revolution analytics <br>
+                            – Dataiku <br>
+                        </p>
+                        <hr>
+                        <h4 class="card-title">
+                            <a href="#">Les avantages</a>
+                        </h4>
+                        <p class="card-text">
+                            - Peu cher <br>
+                            - Très innovant
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">Utiliser le package Big Data d’un éditeur
+
+                            </a>
+                        </h4>
+                        <p class="card-text">Grand éditeurs
+                            - SAS <br>– IBM<br>
+                            - Teradata <br>- Oracle<br>
+
+                        </p>
+                        <hr>
+                        <h4 class="card-title">
+                            <a href="#">Les avantages</a>
+                        </h4>
+                        <p class="card-text">
+                            - Réputé cher     <br>
+                            - Coût maitrisé
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <section class="slice">
+
+            </section>
+            <hr>
+            <!-- Page Content -->
+            <div class="container">
+
+                <!-- Portfolio Item Row -->
+                <div class="row">
+
+                    <div class="col-md-8">
+                        <img class="img-fluid" src="images/hadoop.jpg" alt="">
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3 class="my-3">Processus de la gestion des données</h3>
+                        <p>La gestion des données se fait en quatre étapes :</p>
+                        <ul>
+                            <li>Entrée des données</li>
+                            <li>Ingestion</li>
+                            <li>Traitement</li>
+                            <li>Résultats utilisables</li>
+                        </ul>
+                    </div>
+
+                </div>
+                    </div>
+
+                </div>
+                <!-- /.row -->
+        <section class="slice">
+
+        </section>
+
+            <section class="timeline_area section_padding_130">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-sm-8 col-lg-6">
+                            <!-- Section Heading-->
+                            <div class="section_heading text-center">
+                                <h6></h6>
+                                <h3>Quelques articles</h3>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Timeline Area-->
+                            <div class="apland-timeline-area">
+                                <!-- Single Timeline Content-->
+                                <div class="single-timeline-area">
+                                    <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                        <p>2022</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 col-lg-4">
+                                            <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                                <div class="timeline-icon"><i class="fa fa-desktop" aria-hidden="true"></i></div>
+                                                <div class="timeline-text">
+                                                    <a href="https://www.journaldunet.com/solutions/dsi/1507321-recrutement-pxm-cybersecurite-les-challenges-du-big-data-en-2022/"><h6>Les challenges du Big Data en 2022</h6></a>
+                                                    <p>
+                                                        <!--                                                        Chronique de Philip Denisov <br>
+                                                                                                                Mis à jour le 07/12/21-->
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4">
+                                            <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                                <div class="timeline-icon"><i class="fa fa-desktop" aria-hidden="true"></i></div>
+                                                <div class="timeline-text">
+                                                    <a href="https://www.gabonflash.com/le-marche-outils-de-visualisation-de-donnees-2022-continue-de-croitre/"><h6>Le marché Outils de visualisation de données</h6></a>
+                                                    <p>
+                                                        <!--                                                        Chronique de Philip Denisov <br>
+                                                                                                                Mis à jour le 07/12/21-->
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-timeline-area">
+                                    <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                        <p>2021</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 col-lg-4">
+                                            <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                                <div class="timeline-icon"><i class="fa fa-desktop" aria-hidden="true"></i></div>
+                                                <div class="timeline-text">
+                                                   <a href="https://datascientest.com/hadoop"><h6>Hadoop : qu’est-ce que c’est et comment apprendre à l’utiliser ?</h6></a>
+                                                    <p>
+<!--                                                        Chronique de Philip Denisov <br>
+                                                        Mis à jour le 07/12/21-->
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Single Timeline Content-->
+                                <div class="single-timeline-area">
+                                    <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                        <p>2020</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 col-lg-4">
+                                            <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                                <div class="timeline-icon"><i class="fa fa-desktop" aria-hidden="true"></i></div>
+                                                <div class="timeline-text">
+                                                    <a href="https://www.journaldunet.com/solutions/dsi/1493729-quelles-technologies-pour-une-strategie-big-data-reussie-en-2020/"><h6>Quelles technologies pour une stratégie big data réussie en 2020 ?</h6></a>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4">
+                                            <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                                <div class="timeline-icon"><i class="fa fa-desktop" aria-hidden="true"></i></div>
+                                                <div class="timeline-text">
+                                                    <a href="https://ichi.pro/fr/11-meilleurs-outils-d-analyse-big-data-en-2020-233707678769810"><h6>11 meilleurs outils d'analyse Big Data en 2020</h6></a>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- Single Timeline Content-->
+                                <div class="single-timeline-area">
+                                    <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                        <p>2019</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 col-lg-4">
+                                            <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                                <div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
+                                                <div class="timeline-text">
+                                                    <a  href="https://easyteam.fr/les-outils-du-big-data/" ><h6>Les outils du Big Data</h6></a>
+                                                    <p></p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <section class="slice">
+
+        </section>
+        <div class="container">
+
+            <!-- Page Heading -->
+            <h1 class="my-4">
+                <h2>Visualisation des données pour les non-experts</h2>
+
+            </h1>
+
+            <!-- Project One -->
+            <div class="row">
+
+                    <h5>LToutes ces données peuvent servir à condition d’avoir les compétences suffisantes pour les exploiter. A l’origine, le domaine du Big Data n’était réservé qu’à un public limité de spécialistes et d’experts car la multitude d’outils nécessitait des compétences pointues sur des technologies récentes et des langages peu répandus. En effet, une multitude de bases de données (Apache Hive, MongoDB, Cloudera Impala, HBase, Cassandra, ..) est apparue pour stocker tous ces formats divers et variés. Jusqu’à présent, on utilisait des Systèmes de Gestion de Base de Données (SGBD) « classiques » et relationnelles (Oracle, SqlServer, PostgreSQL, ..). Après quelques années, les éditeurs ont compris qu’il fallait trouver des solutions pour rendre accessible la technologie du Big Data à un plus grand nombre d’utilisateurs. C’est pourquoi, ils ont déployé, pour toutes ces nouvelles bases de données non relationnelles, des connecteurs natifs dans leurs domaines respectifs :
+
+                        •	Intégration de données : les ETL (Informatica, Talend, IBM Datastage,..)
+                        •	Restitution et visualisation des données : les principaux outils de Business Intelligence (Qlik Sense, Tableau, PowerBI, Business Objects, Microstrategy)
+
+                        Aujourd’hui, tout le monde peut utiliser et visualiser des données « du Big Data » sans connaître et maitriser la technologie de stockage utilisée.
+
+                    </h5>
+
+                </h5>
+                <br>
+
+            </div>
+
+            <h1 class="my-4">
+                <h2>Conclusion</h2>
+
+            </h1>
+            <h4>
+                La veille technologique est une partie intégrante du métier d’informaticien. Elle est nécessaire et indispensable pour suivre les grandes orientations et les nouvelles tendances du secteur IT. L’informatique étant un domaine en perpétuelle évolution. Notre rôle d’informaticien est de pouvoir anticiper tous ces changements, de s’adapter à ces nouvelles technologies et de se former en permanence. En conclusion, nous avons besoin d’outils, gratuits comme payants, pour pouvoir utiliser toutes ces nouvelles données générées par l’Homme.
+
+            </h4>
+            <!-- /.row -->
+        </div>
+
+
+    <section class="slice slice-lg">
+
+    </section>
+
+
+
+
+
+    <!-- Core JS  -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/svg-injector/dist/svg-injector.min.js"></script>
+    <script src="assets/libs/feather-icons/dist/feather.min.js"></script>
+    <!-- Quick JS -->
+    <script src="assets/js/quick-website.js"></script>
+    <!-- Feather Icons -->
+    <script>
+        feather.replace({
+            'width': '1em',
+            'height': '1em'
+        })
+    </script>
+</body>
+
+</html>
